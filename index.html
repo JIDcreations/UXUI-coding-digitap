@@ -6,7 +6,6 @@
   <title>Digitap – Design My Account Page</title>
 
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -33,7 +32,6 @@
   </header>
 
   <main class="container">
-    <!-- no outer card around everything -->
     <section class="page-content">
 
       <h1>Design My Account Page</h1>
@@ -91,7 +89,7 @@
           </div>
         </div>
 
-        <button class="btn primary full">Open Figma viewer</button>
+        <button class="btn primary full" id="openFigmaBtn">Open Figma viewer</button>
       </div>
 
       <div class="section">
@@ -127,8 +125,26 @@
     </section>
   </main>
 
-  <script>
-    lucide.createIcons();
-  </script>
+  <!-- Overlay -->
+  <div class="figma-overlay" id="figmaOverlay" aria-hidden="true">
+    <div class="figma-panel" role="dialog" aria-modal="true" aria-label="Figma viewer">
+      <button class="figma-close" id="closeFigmaBtn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="figma-loader" aria-hidden="true"></div>
+      <h3 class="figma-title">Opening Figma viewer</h3>
+      <p class="figma-sub">Preparing your file and comments…</p>
+
+      <div class="figma-actions">
+        <button class="btn ghost" id="closeFigmaBtn2">Close</button>
+        <button class="btn primary" id="continueFigmaBtn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="animation.js"></script>
 </body>
 </html>

@@ -181,7 +181,7 @@ h2{
   color: #fff;
 }
 .btn.primary:hover{
-  background: var(--black-hover);   
+  background: var(--black-hover);
   border-color: var(--black-hover);
 }
 
@@ -202,7 +202,7 @@ h2{
   color: var(--muted);
 }
 .btn.remove:hover{
-  background: var(--red);          
+  background: var(--red);
   border-color: var(--red);
   color: #fff;
 }
@@ -345,9 +345,9 @@ select{
   display: inline-block;
   font-size: 12px;
   padding: 4px 12px;
-  border-radius: 16px;          
-  background: #E6B800;         
-  color: #ffffff;               
+  border-radius: 16px;
+  background: #E6B800;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -358,4 +358,105 @@ select{
   .file{ flex-direction:column; align-items:flex-start; }
   .file-actions{ width:100%; justify-content:flex-end; }
   .file-meta strong{ max-width: 34ch; }
+}
+
+/* ===== Figma Viewer Overlay Animation ===== */
+.no-scroll{
+  overflow: hidden;
+}
+
+.figma-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity .22s ease;
+}
+
+.figma-overlay.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.figma-panel{
+  width: min(420px, calc(100% - 32px));
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 22px;
+  position: relative;
+
+  transform: translateY(16px) scale(.98);
+  opacity: 0;
+  transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .22s ease;
+}
+
+.figma-overlay.active .figma-panel{
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.figma-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.figma-close:hover{
+  background: var(--white);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.figma-loader{
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 3px solid #eef0f4;
+  border-top-color: var(--red);
+  margin: 10px auto 14px;
+  animation: figmaSpin .95s linear infinite;
+}
+
+@keyframes figmaSpin{
+  to{ transform: rotate(360deg); }
+}
+
+.figma-title{
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.figma-sub{
+  margin: 6px 0 16px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.figma-actions{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.figma-actions .btn.primary:hover{
+  background: var(--black-hover);
+  border-color: var(--black-hover);
 }
