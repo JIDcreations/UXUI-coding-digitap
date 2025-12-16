@@ -38,7 +38,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 continueBtn.addEventListener('click', () => {
-  // later: echte figma link
-  // window.open('https://figma.com', '_blank');
+  
   closeFigma();
 });

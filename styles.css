@@ -90,7 +90,7 @@ body{
   justify-content:center;
 }
 
-/* No outer card */
+
 .page-content{
   width: min(980px, 100%);
   background: transparent;
@@ -174,7 +174,7 @@ h2{
   margin-top: 14px;
 }
 
-/* Replace / main CTAs */
+
 .btn.primary{
   background: var(--red);
   border-color: var(--red);
@@ -195,7 +195,7 @@ h2{
   background: rgba(200,16,46,.06);
 }
 
-/* Remove buttons (hover -> red) */
+
 .btn.remove{
   background: #f3f4f6;
   border-color: #f3f4f6;
@@ -207,7 +207,7 @@ h2{
   color: #fff;
 }
 
-/* Keep the "Remove submission" (ghost) like your screenshot */
+
 .btn.ghost{
   background: #f3f4f6;
   border-color: #f3f4f6;
