@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digitap – Design My Account Page</title>
+
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -27,15 +28,13 @@
     <div class="topbar-right">
       <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
       <button class="icon-btn" aria-label="Notifications"><i data-lucide="bell"></i></button>
-
-      <!-- profile image from assets -->
       <img src="assets/RICK.png" alt="Profile" class="avatar" />
     </div>
   </header>
 
   <main class="container">
-    <!-- no outer border box, just a white surface on the page background -->
-    <section class="surface">
+    <!-- no outer card around everything -->
+    <section class="page-content">
 
       <h1>Design My Account Page</h1>
 
@@ -55,7 +54,7 @@
 
       <div class="actions">
         <button class="btn outline">Edit</button>
-        <button class="btn remove">Remove submission</button>
+        <button class="btn ghost">Remove submission</button>
         <button class="btn outline">Peer feedback</button>
       </div>
 
@@ -70,6 +69,7 @@
               <span>Uploaded on 09/11/2025</span>
             </div>
           </div>
+
           <div class="file-actions">
             <button class="btn primary sm">Replace</button>
             <button class="btn remove sm">Remove</button>
@@ -84,6 +84,7 @@
               <span>Uploaded on 09/11/2025</span>
             </div>
           </div>
+
           <div class="file-actions">
             <button class="btn primary sm">Replace</button>
             <button class="btn remove sm">Remove</button>
@@ -105,7 +106,6 @@
         <article class="comment">
           <div class="comment-top">
             <div class="comment-user">
-              <!-- xavier image from assets -->
               <img src="assets/XAVIER.jpeg" alt="Xavier" />
               <div>
                 <strong>Xavier Waterslaeghers</strong>

@@ -26,7 +26,7 @@ body{
   align-items:center;
   padding: 14px 24px;
   border-bottom: 1px solid var(--border);
-  background: transparent; /* sits on #F6F7FB */
+  background: transparent;
 }
 
 .topbar-left{
@@ -85,23 +85,25 @@ body{
 
 /* Layout */
 .container{
-  padding: 28px 24px 70px;
+  padding: 32px 24px 70px;
   display:flex;
   justify-content:center;
 }
 
-/* No outer border box: just a white content surface */
-.surface{
+/* No outer card */
+.page-content{
   width: min(980px, 100%);
-  background: var(--white);
-  padding: 28px;
-  border-radius: 16px;
-  /* no border / no shadow */
+  background: transparent;
 }
 
+/* Typography */
 h1{
   margin: 0 0 10px;
   font-size: 22px;
+}
+h2{
+  font-size: 14px;
+  margin: 0 0 12px;
 }
 
 .chips{
@@ -151,6 +153,7 @@ h1{
   border: 1px solid var(--border);
   background: var(--white);
   color: var(--text);
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
 }
 
 .btn:focus{
@@ -171,14 +174,14 @@ h1{
   margin-top: 14px;
 }
 
-/* Primary (Replace / Open Figma viewer) */
+/* Replace / main CTAs */
 .btn.primary{
   background: var(--red);
   border-color: var(--red);
   color: #fff;
 }
 .btn.primary:hover{
-  background: var(--black-hover); /* replace hover -> black */
+  background: var(--black-hover);   /* Replace hover -> black */
   border-color: var(--black-hover);
 }
 
@@ -199,9 +202,21 @@ h1{
   color: var(--muted);
 }
 .btn.remove:hover{
-  background: var(--red);
+  background: var(--red);          /* Remove hover -> red */
   border-color: var(--red);
   color: #fff;
+}
+
+/* Keep the "Remove submission" (ghost) like your screenshot */
+.btn.ghost{
+  background: #f3f4f6;
+  border-color: #f3f4f6;
+  color: var(--muted);
+}
+.btn.ghost:hover{
+  background: #e9ebf1;
+  border-color: #e9ebf1;
+  color: #4b5563;
 }
 
 /* Sections */
@@ -209,10 +224,6 @@ h1{
   margin-top: 26px;
   padding-top: 18px;
   border-top: 1px solid var(--border);
-}
-.section h2{
-  font-size: 14px;
-  margin: 0 0 12px;
 }
 
 /* Files */
@@ -342,7 +353,6 @@ select{
 /* Responsive */
 @media (max-width: 720px){
   .container{ padding: 18px 14px 60px; }
-  .surface{ padding: 18px; border-radius: 14px; }
   .breadcrumb{ display:none; }
   .file{ flex-direction:column; align-items:flex-start; }
   .file-actions{ width:100%; justify-content:flex-end; }
