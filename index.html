@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digitap – Design My Account Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand">
+        <img src="assets/digitap.svg" alt="Digitap logo" class="brand-logo" />
+      </div>
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <span>Digitap</span>
+        <span class="sep">›</span>
+        <span>Expert Class UX/UI</span>
+        <span class="sep">›</span>
+        <strong>Design My Account Page</strong>
+      </nav>
+    </div>
+
+    <div class="topbar-right">
+      <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+      <button class="icon-btn" aria-label="Notifications"><i data-lucide="bell"></i></button>
+
+      <!-- profile image from assets -->
+      <img src="assets/RICK.png" alt="Profile" class="avatar" />
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- no outer border box, just a white surface on the page background -->
+    <section class="surface">
+
+      <h1>Design My Account Page</h1>
+
+      <div class="chips">
+        <span class="chip">Due 10/12 – 23:59</span>
+        <span class="chip">No feedback yet</span>
+        <span class="chip">20% weight</span>
+      </div>
+
+      <p class="description">
+        Create a comprehensive account management interface that allows users to update their personal information,
+        change password settings, and manage notification preferences. The design should follow modern UX principles
+        and remain consistent with the existing design system.
+      </p>
+
+      <a href="#" class="link">Read more</a>
+
+      <div class="actions">
+        <button class="btn outline">Edit</button>
+        <button class="btn remove">Remove submission</button>
+        <button class="btn outline">Peer feedback</button>
+      </div>
+
+      <div class="section">
+        <h2>Submitted files</h2>
+
+        <div class="file">
+          <div class="file-left">
+            <span class="file-ic"><i data-lucide="figma"></i></span>
+            <div class="file-meta">
+              <strong>2526_DesignMyAccountPage_Lifeooghe.fig</strong>
+              <span>Uploaded on 09/11/2025</span>
+            </div>
+          </div>
+          <div class="file-actions">
+            <button class="btn primary sm">Replace</button>
+            <button class="btn remove sm">Remove</button>
+          </div>
+        </div>
+
+        <div class="file">
+          <div class="file-left">
+            <span class="file-ic"><i data-lucide="file-text"></i></span>
+            <div class="file-meta">
+              <strong>2526_DesignMyAccountPage_Lifeooghe.pdf</strong>
+              <span>Uploaded on 09/11/2025</span>
+            </div>
+          </div>
+          <div class="file-actions">
+            <button class="btn primary sm">Replace</button>
+            <button class="btn remove sm">Remove</button>
+          </div>
+        </div>
+
+        <button class="btn primary full">Open Figma viewer</button>
+      </div>
+
+      <div class="section">
+        <h2>Comments</h2>
+
+        <div class="filters">
+          <select aria-label="Sort"><option>Date</option></select>
+          <select aria-label="Category"><option>Category</option></select>
+          <select aria-label="Person"><option>Person</option></select>
+        </div>
+
+        <article class="comment">
+          <div class="comment-top">
+            <div class="comment-user">
+              <!-- xavier image from assets -->
+              <img src="assets/XAVIER.jpeg" alt="Xavier" />
+              <div>
+                <strong>Xavier Waterslaeghers</strong>
+                <span>Student</span>
+              </div>
+            </div>
+            <span class="date">08/11/2025</span>
+          </div>
+
+          <p>
+            The interface feels calm and consistent with the rest of the platform.
+            I would consider reducing the visual weight of secondary buttons to keep the focus on the main task.
+          </p>
+
+          <span class="tag">Typography</span>
+        </article>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
